@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Тренажёр по ассемблеру</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+<h1>Тренажёр по ассемблеру</h1>
+<section class="card intro">
+<p><b>Указать новые значения только ИЗМЕНИВШИХСЯ регистров после выполнения каждой команды или самого сегмента данных.</b></p>
+<p>Значения вводятся в HEX без <b>h</b> (например, <code>0029</code>). Для флагов — <code>0</code> или <code>1</code>.</p>
+<div class="progress"><span id="progressText"></span></div>
+</section>
+<section class="card">
+<h2>Исходные данные</h2>
+<div id="initialMemory"></div>
+<div id="initialRegs" class="initial-regs"></div>
+</section>
+<section class="card task-card">
+<div class="task-head">
+<div><span class="task-num" id="taskNum"></span><h2 id="command"></h2></div>
+<div class="nav"><button id="prevBtn">← Назад</button><button id="nextBtn">Далее →</button></div>
+</div>
+<div id="registerForm" class="register-form"></div>
+<div id="memoryForm" class="memory-area"></div>
+<div class="actions"><button class="check" id="checkBtn">Проверить</button><button id="clearBtn">Очистить</button></div>
+<div id="message" class="message" aria-live="polite"></div>
+</section>
+<section class="card legend"><span><i class="dot green"></i> правильно</span><span><i class="dot red"></i> неправильно</span><span><i class="dot yellow"></i> поле не изменялось</span></section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
